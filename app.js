@@ -11,7 +11,17 @@ function verificarIntento() {
     let numeroDeUsuario = parseInt(
         document.getElementById("valorUsuario").value
     );
-    console.log(numeroDeUsuario);
+    console.log(numeroSecreto);
+
+    if (numeroDeUsuario === numeroSecreto) {
+        asignarTextoElemento("p", "Asertaste el número");
+    } else {
+        if (numeroDeUsuario > numeroSecreto) {
+            asignarTextoElemento("p", "El número secreto es menor");
+        } else {
+            asignarTextoElemento("p", "El número secreto es mayor");
+        }
+    }
     return;
 }
 
@@ -20,4 +30,4 @@ function generarNumeroSecreto() {
 }
 
 asignarTextoElemento("h1", "¡Juego del número secreto!");
-asignarTextoElemento("h2", "Indica un número del 1 al 10");
+asignarTextoElemento("p", "Indica un número del 1 al 10");
