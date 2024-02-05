@@ -1,6 +1,7 @@
 let numeroSecreto = 0;
 let intentos = 0;
-// Alamacenando los números en una lista para prevenir que si ya salió no vuelva a salir.
+// Alamacenando los números en una lista para
+// Prevenir que si ya salió no vuelva a salir.
 let listaNumerosSorteados = [];
 let numeroMaximo = 10;
 
@@ -14,11 +15,10 @@ function verificarIntento() {
     let numeroDeUsuario = parseInt(
         document.getElementById("valorUsuario").value
     );
-    console.log(numeroDeUsuario);
 
     if (numeroDeUsuario === numeroSecreto) {
         asignarTextoElemento(
-            //Alternar texto 'vez o 'veces
+            //Utilizamos operador ternario para alternar texto 'vez o 'veces
             "p",
             `Asertaste el número en ${intentos} ${
                 intentos === 1 ? "vez" : "veces"
@@ -45,7 +45,6 @@ function limpiarCaja() {
 
 function generarNumeroSecreto() {
     let numeroGenerado = Math.floor(Math.random() * 10) + 1;
-    console.log(numeroGenerado);
     // Si el numero generado esta incluido en la lista
     // Si ya sorteamos todos los números
     if (listaNumerosSorteados.length == numeroMaximo) {
@@ -55,8 +54,8 @@ function generarNumeroSecreto() {
             "Ya se sortearon todos los números posibles."
         );
     } else {
-        console.log(numeroSecreto);
         console.log(listaNumerosSorteados);
+        // Función Recursiva
         if (listaNumerosSorteados.includes(numeroGenerado)) {
             return generarNumeroSecreto();
         } else {
