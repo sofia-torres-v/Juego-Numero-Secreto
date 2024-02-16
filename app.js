@@ -16,6 +16,12 @@ function verificarIntento() {
         document.getElementById("valorUsuario").value
     );
 
+    // Verificar si se ha ingresado un número válido
+    if (isNaN(numeroDeUsuario)) {
+        asignarTextoElemento("p", " Ingresa un número válido");
+        return;
+    }
+
     if (numeroDeUsuario === numeroSecreto) {
         asignarTextoElemento(
             //Utilizamos operador ternario para alternar texto 'vez o 'veces
