@@ -142,7 +142,7 @@ button {
     .container__img {
         position: relative;
         display: flex;
-        height: 605px;
+        min-height: 100vh;
     }
 }
 
