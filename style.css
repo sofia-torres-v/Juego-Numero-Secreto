@@ -118,6 +118,7 @@ button {
         margin: 0 auto;
     }
     .container__contenido {
+        min-height: 100vh;
         grid-template-columns: 1fr 1fr;
     }
     .container__informaciones {
